@@ -99,18 +99,18 @@ public class MainActivity extends AppCompatActivity {
         btnHare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this,"sss",Toast.LENGTH_SHORT).show();
-//                new ShareAction(MainActivity.this).setPlatform(SHARE_MEDIA.QQ)
-//                        .withText("hello")
-//                        .setCallback(umShareListener)
-//                        .share();
-
-
                 UMImage image = new UMImage(MainActivity.this, bitmap);
-                new ShareAction(MainActivity.this).withTitle("haha")
-                        .setDisplayList(SHARE_MEDIA.QQ)
+                Toast.makeText(MainActivity.this,"sss",Toast.LENGTH_SHORT).show();
+                new ShareAction(MainActivity.this).setPlatform(SHARE_MEDIA.QQ)
+                        .withText("hello")
                         .withMedia(image)
-                        .setCallback(umShareListener).open();
+                        .setCallback(umShareListener)
+                        .share();
+
+//                new ShareAction(MainActivity.this)
+//                        .setDisplayList(SHARE_MEDIA.QQ)
+//                        .withMedia(image)
+//                        .setCallback(umShareListener).open();
 
             }
         });
